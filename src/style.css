@@ -40,7 +40,10 @@ body {
   display: flex;
   justify-content: center;
   align-items: center;
-  height: 60vh;
+  height: 50vh;
+  font-size: clamp(2rem, 4vw, 5rem);
+  text-align: center;
+  padding: 0 2rem;
 }
 
 .homePage {
@@ -137,24 +140,7 @@ button:hover {
   cursor: pointer;
 }
 
-.inputHeader {
-  align-self: center;
-  margin: 2rem;
-}
-
-.inputHeader form {
-  display: flex;
-  gap: 2rem;
-}
-
-.inputHeader form input {
-  padding: 0.5rem 1rem;
-  border-radius: 10px;
-  border: 1px solid #111;
-  width: 18%;
-}
-
-.catCards {
+.productsCards {
   display: grid;
   grid-template-columns: repeat(auto-fill, 250px);
   justify-content: center;
@@ -176,13 +162,6 @@ button:hover {
 
 .card .label {
   font-weight: bold;
-}
-
-.card input {
-  font-weight: bold;
-  border-radius: 5px;
-  border: 1px solid #111;
-  text-align: center;
 }
 
 .detail {
@@ -281,18 +260,7 @@ textarea {
   text-transform: capitalize;
 }
 
-.notFound {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  height: 50vh;
-  font-size: clamp(2rem, 4vw, 5rem);
-  font-weight: bold;
-  text-align: center;
-  padding: 0 2rem;
-  align-self: center;
-}
-
+/*? ----- media queries ----- */
 @media (max-width: 1000px) {
   .productPage img {
     width: 55%;

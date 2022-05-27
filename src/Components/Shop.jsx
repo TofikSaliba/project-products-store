@@ -110,35 +110,6 @@ class Shop extends React.Component {
     );
   };
 
-  // getUpdated = async (newKind, newPhone, newPrice, id) => {
-  //   try {
-  //     this.setState({ isSpinning: true });
-  //     const catToUpdate = this.state.catsArr.find((cat) => cat.id === id);
-  //     const updatedCat = {
-  //       ...catToUpdate,
-  //       kind: newKind,
-  //       phone: newPhone,
-  //       price: newPrice,
-  //     };
-  //     const { data, statusText } = await API.put(`/cats/${id}`, updatedCat);
-  //     if (statusText === "OK") {
-  //       this.setState((prev) => {
-  //         return {
-  //           catsArr: prev.catsArr.map((cat) => {
-  //             if (cat.id === id) {
-  //               return data;
-  //             }
-  //             return cat;
-  //           }),
-  //           isSpinning: false,
-  //         };
-  //       });
-  //     }
-  //   } catch (err) {
-  //     console.log(err);
-  //   }
-  // };
-
   render() {
     return (
       <>
@@ -155,7 +126,7 @@ class Shop extends React.Component {
             <div></div>
           </div>
         ) : (
-          <div className="catCards">{this.displayProducts()}</div>
+          <div className="productsCards">{this.displayProducts()}</div>
         )}
       </>
     );

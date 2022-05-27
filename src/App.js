@@ -19,7 +19,7 @@ class App extends React.Component {
               <Route exact path="/" component={HomePage} />
               <Route exact path="/Products" component={Shop} />
               <Route exact path="/Products/:id" component={ProductPage} />
-              <Route component={NotFound} />
+              <Route path="*" component={NotFound} />
             </Switch>
           </div>
         </Router>

@@ -50,8 +50,8 @@ class AddPopup extends React.Component {
         <form onSubmit={this.handleSubmit} className="addForm">
           {this.getInputFields()}
           <div className="btnsContainer">
-            <button type="submit">Add</button>
             <button onClick={this.props.cancelAdd}>Cancel</button>
+            <button type="submit">Add</button>
           </div>
         </form>
       </div>
