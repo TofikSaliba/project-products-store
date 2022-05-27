@@ -1,0 +1,296 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 62.5%;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+body {
+  background: deepskyblue;
+}
+
+.navBar {
+  font-size: 1.6rem;
+  display: flex;
+  gap: 1rem;
+  background: rgb(25, 137, 212);
+  border-radius: 5px;
+  max-width: 1400px;
+  margin: 1rem auto;
+}
+
+.navBar a {
+  padding: 1.5rem;
+  text-decoration: none;
+  border-radius: 5px;
+  color: #fff;
+  transition: all 0.5s ease;
+}
+
+.navBar a:hover {
+  background: rgb(6, 114, 187);
+}
+
+.notFound {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 60vh;
+}
+
+.homePage {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 4rem;
+  gap: 3rem;
+}
+
+button {
+  cursor: pointer;
+  padding: 0.3rem 0.5rem;
+  border-radius: 5px;
+  border: 1px solid #111;
+}
+
+button:hover {
+  background: #d1d1d1;
+}
+
+.popUpHeader {
+  margin: 3rem;
+  text-align: center;
+  font-size: clamp(2rem, 3vw, 4rem);
+}
+
+.addPopup {
+  position: fixed;
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+  align-items: center;
+  justify-content: center;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100%;
+  background: rgba(2, 2, 2, 0.7);
+  color: #fff;
+}
+
+.addForm {
+  display: flex;
+  flex-direction: column;
+  gap: 4rem;
+  align-items: center;
+  justify-content: center;
+  width: 70%;
+  max-width: 1000px;
+}
+
+.addForm input {
+  border-radius: 5px;
+  border: 3px solid rgb(6, 114, 187);
+  font-size: clamp(1.4rem, 3vw, 2rem);
+  width: 100%;
+  padding: 1rem 2rem;
+}
+
+.btnsContainer {
+  display: flex;
+  width: 100%;
+  justify-content: space-between;
+}
+
+.mainContainer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  max-width: 1400px;
+  margin: 3rem auto;
+  gap: 4rem;
+  font-size: clamp(1.2rem, 2vw, 1.8rem);
+}
+
+.filterBox {
+  display: flex;
+  justify-content: center;
+  gap: 2rem;
+  height: 4rem;
+}
+
+.filterBox input,
+.filterBox select {
+  border-radius: 5px;
+  border: 1px solid #111;
+  padding: 0.3rem 1rem;
+  font-size: clamp(1.2rem, 3vw, 2rem);
+}
+
+.filterBox select {
+  cursor: pointer;
+}
+
+.inputHeader {
+  align-self: center;
+  margin: 2rem;
+}
+
+.inputHeader form {
+  display: flex;
+  gap: 2rem;
+}
+
+.inputHeader form input {
+  padding: 0.5rem 1rem;
+  border-radius: 10px;
+  border: 1px solid #111;
+  width: 18%;
+}
+
+.catCards {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, 250px);
+  justify-content: center;
+  width: 100vw;
+  max-width: 1400px;
+  gap: 2rem;
+  padding: 0 2rem;
+}
+
+.card {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  gap: 1rem;
+  background: powderblue;
+  border-radius: 10px;
+  padding: 1rem;
+}
+
+.card .label {
+  font-weight: bold;
+}
+
+.card input {
+  font-weight: bold;
+  border-radius: 5px;
+  border: 1px solid #111;
+  text-align: center;
+}
+
+.detail {
+  display: flex;
+  width: 100%;
+}
+
+.detail input {
+  width: 75%;
+}
+
+.name {
+  font-weight: bold;
+  text-align: center;
+  min-height: 5rem;
+}
+
+img {
+  width: 220px;
+  align-self: center;
+}
+
+@media (max-width: 700px) {
+  .inputHeader form {
+    flex-direction: column;
+    gap: 2rem;
+  }
+
+  .inputHeader form input {
+    width: 100%;
+  }
+
+  .addForm {
+    gap: 3rem;
+    width: 80%;
+  }
+
+  .addForm input {
+    padding: 0.6rem 1.4rem;
+  }
+}
+
+@media (max-width: 390px) {
+  button {
+    padding: 0.1rem 0.2rem;
+  }
+  .filterBox {
+    gap: 1rem;
+    height: 3rem;
+  }
+  .filterBox input {
+    width: 140px;
+  }
+
+  .addForm {
+    gap: 2rem;
+    width: 90%;
+  }
+
+  .addForm input {
+    padding: 0.3rem 0.7rem;
+  }
+}
+
+/*? ----------- spinner ------------------- */
+
+.lds-ripple {
+  margin-top: 20%;
+  display: inline-block;
+  position: relative;
+  width: 80px;
+  height: 80px;
+}
+.lds-ripple div {
+  position: absolute;
+  border: 4px solid rgb(0, 0, 0);
+  opacity: 1;
+  border-radius: 50%;
+  animation: lds-ripple 1s cubic-bezier(0, 0.2, 0.8, 1) infinite;
+}
+.lds-ripple div:nth-child(2) {
+  animation-delay: -0.5s;
+}
+@keyframes lds-ripple {
+  0% {
+    top: 36px;
+    left: 36px;
+    width: 0;
+    height: 0;
+    opacity: 0;
+  }
+  4.9% {
+    top: 36px;
+    left: 36px;
+    width: 0;
+    height: 0;
+    opacity: 0;
+  }
+  5% {
+    top: 36px;
+    left: 36px;
+    width: 0;
+    height: 0;
+    opacity: 1;
+  }
+  100% {
+    top: 0px;
+    left: 0px;
+    width: 72px;
+    height: 72px;
+    opacity: 0;
+  }
+}
