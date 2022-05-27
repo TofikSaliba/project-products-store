@@ -7,6 +7,7 @@
 html {
   font-size: 62.5%;
   font-family: Verdana, Geneva, Tahoma, sans-serif;
+  height: 100vh;
 }
 
 body {
@@ -52,9 +53,10 @@ body {
 
 button {
   cursor: pointer;
-  padding: 0.3rem 0.5rem;
+  padding: 0.3rem 1rem;
   border-radius: 5px;
   border: 1px solid #111;
+  font-size: clamp(1.4rem, 2vw, 2rem);
 }
 
 button:hover {
@@ -159,7 +161,7 @@ button:hover {
   width: 100vw;
   max-width: 1400px;
   gap: 2rem;
-  padding: 0 2rem;
+  padding: 3rem 2rem;
 }
 
 .card {
@@ -203,6 +205,104 @@ img {
   align-self: center;
 }
 
+.editBtns {
+  align-self: center;
+  display: flex;
+  gap: 2rem;
+  padding: 2rem 0;
+}
+
+.productPage {
+  display: flex;
+  justify-content: flex-start;
+  align-items: flex-start;
+  flex-direction: column;
+  gap: 2rem;
+  height: 80vh;
+  font-size: clamp(1.3rem, 2vw, 2rem);
+  padding: 0 2rem;
+  width: 100%;
+}
+
+.product-inner-title {
+  align-self: center;
+  text-align: center;
+  font-size: clamp(2rem, 3vw, 4rem);
+  width: 100%;
+}
+
+.detailField {
+  display: flex;
+  align-items: center;
+  width: 30%;
+}
+
+.detailField input {
+  display: flex;
+  flex-grow: 1;
+}
+
+.productPage input {
+  width: 50%;
+  border-radius: 10px;
+  border: 1px solid #111;
+  padding: 0.5rem 1rem;
+  text-align: center;
+  font-size: clamp(1.3rem, 2vw, 1.8rem);
+}
+
+.product-inner-title input {
+  width: 30%;
+  min-width: 220px;
+}
+
+.productPage img {
+  width: 40%;
+  min-width: 200px;
+  border-radius: 10px;
+}
+
+.imageUrlInput {
+  align-self: center;
+  min-width: 240px;
+}
+
+textarea {
+  height: 10rem;
+  width: 50rem;
+  border-radius: 10px;
+  border: 1px solid #111;
+  padding: 0.5rem 1rem;
+  align-self: center;
+}
+
+.bolded {
+  font-weight: bold;
+  text-transform: capitalize;
+}
+
+.notFound {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 50vh;
+  font-size: clamp(2rem, 4vw, 5rem);
+  font-weight: bold;
+  text-align: center;
+  padding: 0 2rem;
+  align-self: center;
+}
+
+@media (max-width: 1000px) {
+  .productPage img {
+    width: 55%;
+  }
+
+  .detailField {
+    width: 50%;
+  }
+}
+
 @media (max-width: 700px) {
   .inputHeader form {
     flex-direction: column;
@@ -221,12 +321,22 @@ img {
   .addForm input {
     padding: 0.6rem 1.4rem;
   }
+
+  .productPage img {
+    width: 70%;
+  }
+
+  .detailField {
+    width: 70%;
+  }
+
+  textarea {
+    height: 7rem;
+    width: 35rem;
+  }
 }
 
 @media (max-width: 390px) {
-  button {
-    padding: 0.1rem 0.2rem;
-  }
   .filterBox {
     gap: 1rem;
     height: 3rem;
@@ -243,6 +353,18 @@ img {
   .addForm input {
     padding: 0.3rem 0.7rem;
   }
+
+  .productPage img {
+    width: 80%;
+  }
+
+  .detailField {
+    width: 100%;
+  }
+
+  textarea {
+    width: 23rem;
+  }
 }
 
 /*? ----------- spinner ------------------- */
@@ -253,6 +375,7 @@ img {
   position: relative;
   width: 80px;
   height: 80px;
+  align-self: center;
 }
 .lds-ripple div {
   position: absolute;
