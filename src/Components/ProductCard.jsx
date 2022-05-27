@@ -1,35 +1,27 @@
 import { NavLink } from "react-router-dom";
 
-const ProductCard = ({
-  id,
-  proName,
-  img,
-  category,
-  material,
-  price,
-  handleDelete,
-}) => {
+const ProductCard = ({ product, handleDelete }) => {
   return (
     <div className="card">
-      <div className="name">{proName}</div>
-      <img src={img} alt={proName} />
+      <div className="name">{product.productName}</div>
+      <img src={product.img} alt={product.productName} />
       <div className="detail">
         <span className="label">Category: </span>
-        <span>&nbsp;{category}</span>
+        <span>&nbsp;{product.category}</span>
       </div>
       <div>
         <span className="label">Material: </span>
-        <span>{material}</span>
+        <span>{product.material}</span>
       </div>
       <div className="detail">
         <span className="label">Price: </span>
-        <span>&nbsp;{price.split(".")[0] + "$"}</span>
+        <span>&nbsp;{product.price.split(".")[0] + "$"}</span>
       </div>
       <div className="btnsContainer">
-        <NavLink to={`/Products/${id}`}>
+        <NavLink to={`/Products/${product.id}`}>
           <button>More detail</button>
         </NavLink>
-        <button onClick={() => handleDelete(id)}>Delete</button>
+        <button onClick={() => handleDelete(product.id)}>Delete</button>
       </div>
     </div>
   );

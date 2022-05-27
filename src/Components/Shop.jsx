@@ -33,12 +33,7 @@ class Shop extends React.Component {
       return (
         <ProductCard
           key={pro.id}
-          id={pro.id}
-          proName={pro.productName}
-          img={pro.img}
-          category={pro.category}
-          material={pro.material}
-          price={pro.price}
+          product={pro}
           handleDelete={this.deleteProduct}
         />
       );
@@ -95,23 +90,24 @@ class Shop extends React.Component {
       this.setState({ isSpinning: true });
       const data = await API.post("/shoes", newProduct);
       if (data.statusText === "Created") {
-        this.setState(
-          (prev) => {
-            return {
-              productArr: [...prev.productArr, data.data],
-              isSpinning: false,
-            };
-          },
-          () =>
-            this.filterProducts(
-              this.state.filterTerm,
-              this.state.selectedFilter
-            )
-        );
+        this.addProductSetState(data.data);
       }
     } catch (err) {
       console.log(err);
     }
+  };
+
+  addProductSetState = (data) => {
+    this.setState(
+      (prev) => {
+        return {
+          productArr: [...prev.productArr, data],
+          isSpinning: false,
+        };
+      },
+      () =>
+        this.filterProducts(this.state.filterTerm, this.state.selectedFilter)
+    );
   };
 
   // getUpdated = async (newKind, newPhone, newPrice, id) => {
@@ -153,48 +149,6 @@ class Shop extends React.Component {
         <button onClick={() => this.setState({ adding: true })}>
           Add Product
         </button>
-        {/* <div className="inputHeader">
-          <form onSubmit={this.addCat}>
-            <Input
-              id="name"
-              callBack={this.getInput}
-              type="text"
-              holder="Name"
-              value={this.state.catToAdd.name}
-            />
-            <Input
-              id="img"
-              callBack={this.getInput}
-              type="url"
-              holder="Image Url"
-              value={this.state.catToAdd.img}
-            />
-            <Input
-              id="kind"
-              callBack={this.getInput}
-              type="text"
-              holder="Kind"
-              value={this.state.catToAdd.kind}
-            />
-            <Input
-              id="price"
-              callBack={this.getInput}
-              type="number"
-              holder="Price"
-              value={this.state.catToAdd.price}
-            />
-            <Input
-              id="phone"
-              callBack={this.getInput}
-              type="tel"
-              holder="phone"
-              value={this.state.catToAdd.phone}
-            />
-            <button type="submit" disabled={this.state.addDisabled}>
-              Add
-            </button>
-          </form>
-        </div> */}
         {this.state.isSpinning ? (
           <div className="lds-ripple">
             <div></div>
