@@ -39,7 +39,7 @@
 }
 
 .product-inner-title input {
-  width: 30%;
+  width: 100%;
   min-width: 220px;
 }
 
@@ -53,6 +53,7 @@
 .imageUrlInput {
   align-self: center;
   min-width: 240px;
+  width: 100%;
 }
 
 textarea {

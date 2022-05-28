@@ -83,13 +83,15 @@ class ProductPage extends Component {
       <>
         <img src={product.img} alt={product.productName} />
         {this.state.editing && (
-          <input
-            onChange={(e) => this.getEditInput(e.target.value, "img")}
-            value={this.state.editedProduct.img}
-            className="imageUrlInput"
-            type="url"
-            placeholder="New Image URL"
-          />
+          <div className="detailField">
+            <input
+              onChange={(e) => this.getEditInput(e.target.value, "img")}
+              value={this.state.editedProduct.img}
+              className="imageUrlInput"
+              type="url"
+              placeholder="New Image URL"
+            />
+          </div>
         )}
       </>
     );
