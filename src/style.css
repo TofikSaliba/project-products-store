@@ -8,6 +8,7 @@ html {
   font-size: 62.5%;
   font-family: Verdana, Geneva, Tahoma, sans-serif;
   height: 100vh;
+  user-select: none;
 }
 
 body {
