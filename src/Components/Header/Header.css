@@ -1,11 +1,20 @@
-.navBar {
-  font-size: 1.6rem;
+#root {
   display: flex;
+  justify-content: center;
+}
+
+.navBar {
+  display: flex;
+  position: fixed;
+  top: 0;
+  width: 100%;
+  font-size: 1.6rem;
   gap: 1rem;
   background: rgb(218, 165, 31);
   border-radius: 5px;
   max-width: 1400px;
-  margin: 1rem auto;
+  margin: 0.5rem auto;
+  opacity: 0.9;
 }
 
 .navBar a {
@@ -13,6 +22,7 @@
   text-decoration: none;
   border-radius: 5px;
   color: #fff;
+  font-weight: bold;
   transition: all 0.5s ease;
 }
 

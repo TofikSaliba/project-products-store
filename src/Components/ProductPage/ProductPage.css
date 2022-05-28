@@ -45,7 +45,7 @@
 
 .productPage img {
   width: 40%;
-  min-width: 200px;
+  min-width: 240px;
   border-radius: 10px;
   align-self: center;
 }
@@ -57,7 +57,7 @@
 
 textarea {
   height: 10rem;
-  width: 50rem;
+  width: 64rem;
   border-radius: 10px;
   border: 3px solid rgb(218, 165, 31);
   padding: 0.5rem 1rem;
@@ -72,7 +72,7 @@ textarea::selection {
 .detailField {
   display: flex;
   align-items: center;
-  width: 30%;
+  width: 100%;
 }
 
 .detailField input {
@@ -88,41 +88,40 @@ textarea::selection {
 }
 
 /*? ----- media queries ----- */
-@media (max-width: 1000px) {
-  .productPage img {
-    width: 55%;
-  }
 
-  .detailField {
-    width: 50%;
+@media (max-width: 700px) {
+  textarea {
+    height: 7rem;
+    width: 61rem;
   }
 }
 
-@media (max-width: 700px) {
-  .productPage img {
-    width: 70%;
-  }
-
-  .detailField {
-    width: 70%;
-  }
-
+@media (max-width: 650px) {
   textarea {
-    height: 7rem;
+    width: 52rem;
+  }
+}
+
+@media (max-width: 560px) {
+  textarea {
+    width: 43rem;
+  }
+}
+
+@media (max-width: 470px) {
+  textarea {
     width: 35rem;
   }
 }
 
 @media (max-width: 390px) {
-  .productPage img {
-    width: 80%;
-  }
-
-  .detailField {
-    width: 100%;
-  }
-
   textarea {
-    width: 23rem;
+    width: 29rem;
+  }
+}
+
+@media (max-width: 320px) {
+  textarea {
+    width: 24rem;
   }
 }
