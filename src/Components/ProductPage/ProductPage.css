@@ -1,0 +1,116 @@
+.productPage {
+  display: flex;
+  justify-content: flex-start;
+  align-items: flex-start;
+  flex-direction: column;
+  gap: 2rem;
+  height: 80vh;
+  font-size: clamp(1.3rem, 2vw, 2rem);
+  padding: 0 2rem;
+  width: 100%;
+}
+
+.bolded {
+  font-weight: bold;
+  text-transform: capitalize;
+}
+
+.productPage input {
+  width: 50%;
+  border-radius: 10px;
+  border: 1px solid #111;
+  padding: 0.5rem 1rem;
+  text-align: center;
+  font-size: clamp(1.3rem, 2vw, 1.8rem);
+}
+
+.product-inner-title {
+  align-self: center;
+  text-align: center;
+  font-size: clamp(2rem, 3vw, 4rem);
+  width: 100%;
+}
+
+.product-inner-title input {
+  width: 30%;
+  min-width: 220px;
+}
+
+.productPage img {
+  width: 40%;
+  min-width: 200px;
+  border-radius: 10px;
+  align-self: center;
+}
+
+.imageUrlInput {
+  align-self: center;
+  min-width: 240px;
+}
+
+textarea {
+  height: 10rem;
+  width: 50rem;
+  border-radius: 10px;
+  border: 1px solid #111;
+  padding: 0.5rem 1rem;
+  align-self: center;
+}
+
+.detailField {
+  display: flex;
+  align-items: center;
+  width: 30%;
+}
+
+.detailField input {
+  display: flex;
+  flex-grow: 1;
+}
+
+.editBtns {
+  align-self: center;
+  display: flex;
+  gap: 2rem;
+  padding: 2rem 0;
+}
+
+/*? ----- media queries ----- */
+@media (max-width: 1000px) {
+  .productPage img {
+    width: 55%;
+  }
+
+  .detailField {
+    width: 50%;
+  }
+}
+
+@media (max-width: 700px) {
+  .productPage img {
+    width: 70%;
+  }
+
+  .detailField {
+    width: 70%;
+  }
+
+  textarea {
+    height: 7rem;
+    width: 35rem;
+  }
+}
+
+@media (max-width: 390px) {
+  .productPage img {
+    width: 80%;
+  }
+
+  .detailField {
+    width: 100%;
+  }
+
+  textarea {
+    width: 23rem;
+  }
+}

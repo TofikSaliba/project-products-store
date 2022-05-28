@@ -1,4 +1,6 @@
+import React from "react";
 import { NavLink } from "react-router-dom";
+import "./ProductCard.css";
 
 const ProductCard = ({ product, handleDelete }) => {
   return (
@@ -17,7 +19,7 @@ const ProductCard = ({ product, handleDelete }) => {
         <span className="label">Price: </span>
         <span>&nbsp;{product.price.split(".")[0] + "$"}</span>
       </div>
-      <div className="btnsContainer">
+      <div className="cardBtns">
         <NavLink to={`/Products/${product.id}`}>
           <button>More detail</button>
         </NavLink>

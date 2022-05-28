@@ -1,0 +1,9 @@
+.notFound {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 50vh;
+  font-size: clamp(2rem, 4vw, 5rem);
+  text-align: center;
+  padding: 0 2rem;
+}

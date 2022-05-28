@@ -1,0 +1,39 @@
+.card {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  gap: 1rem;
+  background: powderblue;
+  border-radius: 10px;
+  padding: 1rem;
+}
+
+.card .label {
+  font-weight: bold;
+}
+
+.card img {
+  width: 220px;
+  align-self: center;
+}
+
+.name {
+  font-weight: bold;
+  text-align: center;
+  min-height: 5rem;
+}
+
+.detail {
+  display: flex;
+  width: 100%;
+}
+
+.detail input {
+  width: 75%;
+}
+
+.cardBtns {
+  display: flex;
+  width: 100%;
+  justify-content: space-between;
+}

@@ -1,8 +1,9 @@
 import React from "react";
-import FilterBar from "./FilterBar";
-import ProductCard from "./ProductCard";
-import AddPopup from "./AddPopup";
-import { API } from "../API";
+import FilterBar from "../FilterBar/FilterBar";
+import ProductCard from "../ProductCard/ProductCard";
+import AddPopup from "../AddPopup/AddPopup";
+import { API } from "../../API";
+import "./Shop.css";
 
 class Shop extends React.Component {
   state = {

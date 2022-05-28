@@ -1,10 +1,10 @@
 import React from "react";
 import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
-import HomePage from "./Components/HomePage";
-import Header from "./Components/Header";
-import Shop from "./Components/Shop";
-import ProductPage from "./Components/ProductPage";
-import NotFound from "./Components/NotFound";
+import HomePage from "./Components/HomePage/HomePage";
+import Header from "./Components/Header/Header";
+import Shop from "./Components/Shop/Shop";
+import ProductPage from "./Components/ProductPage/ProductPage";
+import NotFound from "./Components/NotFound/NotFound";
 
 import "./style.css";
 

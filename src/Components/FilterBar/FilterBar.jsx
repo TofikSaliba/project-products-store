@@ -1,6 +1,7 @@
 import React from "react";
-import Input from "./Input";
-import Select from "./Select";
+import Input from "../Input/Input";
+import Select from "../Select/Select";
+import "./FilterBar.css";
 
 class FilterBar extends React.Component {
   state = {

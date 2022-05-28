@@ -1,6 +1,7 @@
 import React, { Component } from "react";
 import { NavLink } from "react-router-dom";
-import { API } from "../API";
+import { API } from "../../API";
+import "./ProductPage.css";
 
 class ProductPage extends Component {
   state = {
@@ -80,7 +81,7 @@ class ProductPage extends Component {
   getImg = (product) => {
     return (
       <>
-        <img src={product.img} alt={product.productName} />;
+        <img src={product.img} alt={product.productName} />
         {this.state.editing && (
           <input
             onChange={(e) => this.getEditInput(e.target.value, "img")}

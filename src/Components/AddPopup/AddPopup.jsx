@@ -1,5 +1,6 @@
 import React from "react";
-import Input from "./Input";
+import Input from "../Input/Input";
+import "./AddPopup.css";
 
 class AddPopup extends React.Component {
   state = {
@@ -49,7 +50,7 @@ class AddPopup extends React.Component {
         <h1 className="popUpHeader">Add A Product Form</h1>
         <form onSubmit={this.handleSubmit} className="addForm">
           {this.getInputFields()}
-          <div className="btnsContainer">
+          <div className="addPopBtns">
             <button onClick={this.props.cancelAdd}>Cancel</button>
             <button type="submit">Add</button>
           </div>
