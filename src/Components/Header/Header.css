@@ -2,7 +2,7 @@
   font-size: 1.6rem;
   display: flex;
   gap: 1rem;
-  background: rgb(25, 137, 212);
+  background: rgb(218, 165, 31);
   border-radius: 5px;
   max-width: 1400px;
   margin: 1rem auto;
@@ -17,5 +17,6 @@
 }
 
 .navBar a:hover {
-  background: rgb(6, 114, 187);
+  background: rgb(226, 226, 178);
+  color: #111;
 }

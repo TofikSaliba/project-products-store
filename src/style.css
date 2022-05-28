@@ -11,7 +11,7 @@ html {
 }
 
 body {
-  background: deepskyblue;
+  background: #111;
 }
 
 button {
@@ -20,10 +20,11 @@ button {
   border-radius: 5px;
   border: 1px solid #111;
   font-size: clamp(1.4rem, 2vw, 2rem);
+  background: rgb(218, 165, 31);
 }
 
 button:hover {
-  background: #d1d1d1;
+  background: rgb(241, 182, 30);
 }
 
 .mainContainer {
@@ -48,7 +49,7 @@ button:hover {
 }
 .lds-ripple div {
   position: absolute;
-  border: 4px solid rgb(0, 0, 0);
+  border: 4px solid rgb(218, 165, 31);
   opacity: 1;
   border-radius: 50%;
   animation: lds-ripple 1s cubic-bezier(0, 0.2, 0.8, 1) infinite;

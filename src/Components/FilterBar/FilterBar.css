@@ -11,6 +11,11 @@
   border: 1px solid #111;
   padding: 0.3rem 1rem;
   font-size: clamp(1.2rem, 3vw, 2rem);
+  background: rgb(226, 226, 178);
+}
+
+.filterBox input::selection {
+  background: rgb(218, 165, 31);
 }
 
 .filterBox select {

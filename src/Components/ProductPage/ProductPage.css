@@ -8,6 +8,7 @@
   font-size: clamp(1.3rem, 2vw, 2rem);
   padding: 0 2rem;
   width: 100%;
+  color: rgb(226, 226, 178);
 }
 
 .bolded {
@@ -22,6 +23,11 @@
   padding: 0.5rem 1rem;
   text-align: center;
   font-size: clamp(1.3rem, 2vw, 1.8rem);
+  background: rgb(226, 226, 178);
+}
+
+.productPage input::selection {
+  background: rgb(218, 165, 31);
 }
 
 .product-inner-title {
@@ -55,6 +61,11 @@ textarea {
   border: 1px solid #111;
   padding: 0.5rem 1rem;
   align-self: center;
+  background: rgb(226, 226, 178);
+}
+
+textarea::selection {
+  background: rgb(218, 165, 31);
 }
 
 .detailField {
