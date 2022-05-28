@@ -14,12 +14,13 @@
 .bolded {
   font-weight: bold;
   text-transform: capitalize;
+  color: rgb(218, 165, 31);
 }
 
 .productPage input {
   width: 50%;
   border-radius: 10px;
-  border: 1px solid #111;
+  border: 3px solid rgb(218, 165, 31);
   padding: 0.5rem 1rem;
   text-align: center;
   font-size: clamp(1.3rem, 2vw, 1.8rem);
@@ -58,7 +59,7 @@ textarea {
   height: 10rem;
   width: 50rem;
   border-radius: 10px;
-  border: 1px solid #111;
+  border: 3px solid rgb(218, 165, 31);
   padding: 0.5rem 1rem;
   align-self: center;
   background: rgb(226, 226, 178);
