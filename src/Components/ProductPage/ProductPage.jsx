@@ -123,7 +123,7 @@ class ProductPage extends Component {
     return entries.map((entry) => {
       return (
         <div key={entry[0]} className="detailField">
-          <span className="bolded">{entry[0]}: </span>
+          <span className="bolded">{entry[0]}:&nbsp;</span>
           {this.restOfDetailsEditing(entry)}
         </div>
       );
@@ -145,7 +145,7 @@ class ProductPage extends Component {
   getPrice = (product) => {
     return (
       <div className="detailField">
-        <span className="bolded">Price: </span>
+        <span className="bolded">Price:&nbsp;</span>
         {this.priceEditing(product)}
       </div>
     );
